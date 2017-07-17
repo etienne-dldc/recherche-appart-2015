@@ -26,7 +26,7 @@ function visit (ctx, next) {
 }
 
 function router (ctx, next) {
-    var path = ctx.pathname.slice(1);
+    var path = ctx.pathname.slice(1).replace('recherche-appart-2015/', '');
     var camelCased = path.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
     if ( _.isFunction(App[camelCased]) ) {
         App[camelCased]();

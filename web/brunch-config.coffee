@@ -1,11 +1,11 @@
 exports.config =
   paths:
-    watched: ['app','vendor','test','vendorlib']
+    watched: ['app','vendor','test']
   files:
     javascripts:
       joinTo:
         'javascripts/app.js': /^app/
-        'javascripts/vendor.js': /^vendor/
+        'javascripts/vendor.js': /^(vendor|node_modules)/
       order:
         before: [
           'vendor/scripts/three.min.js',

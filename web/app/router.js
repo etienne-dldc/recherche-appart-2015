@@ -58,6 +58,9 @@ Router.init = function () {
 
     App.router = require('router');
 
+    // Deploy on gh-pages
+    page.base('/recherche-appart-2015');
+
     page('/', visit, displayHeader, App.displayPlayButton);
     page('*', visit, displayHeader, router);
 
